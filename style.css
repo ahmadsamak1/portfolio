@@ -30,18 +30,11 @@ body {
   justify-content: center;
 }
 
-.navbar ul li {
-  margin: 0 15px;
-}
-
 .navbar ul li a {
   color: #bbb;
+  margin: 0 15px;
   text-decoration: none;
   font-size: 16px;
-}
-
-.navbar ul li a:hover {
-  color: #fff;
 }
 
 /* SECTIONS */
@@ -55,10 +48,9 @@ body {
 }
 
 .section p {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.9;
   color: #ddd;
-  max-width: 900px;
 }
 
 /* HERO */
@@ -66,49 +58,47 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+}
+
+/* 👑 صورتك كبيييييرة */
+.hero-image img {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #333;
+  box-shadow: 0 0 50px rgba(0,0,0,1);
 }
 
 .hero-text h1 {
-  font-size: 60px;
+  font-size: 64px;
 }
 
 .hero-text p {
-  font-size: 20px;
-  color: #aaa;
+  font-size: 22px;
   margin-top: 20px;
-}
-
-/* 👇 صورتك أكبر */
-.hero-image img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #333;
-  box-shadow: 0 0 40px rgba(0,0,0,0.9);
+  color: #aaa;
 }
 
 /* HEADINGS */
 h2 {
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 30px;
 }
 
 /* SKILLS */
 .skills span {
   background: #333;
-  padding: 14px 24px;
+  padding: 14px 26px;
   margin: 10px;
   border-radius: 25px;
-  font-size: 16px;
-  display: inline-block;
+  font-size: 17px;
 }
 
 /* PROJECTS */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
 }
 
@@ -118,16 +108,16 @@ h2 {
   padding-bottom: 20px;
 }
 
+/* صور البروجيكتات موجودة وواضحة */
 .project-images {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   padding: 15px;
   overflow-x: auto;
 }
 
-/* 👇 صور البروجيكتات صغيرة ومرتبة */
 .project-images img {
-  height: 110px;
+  height: 140px;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -147,10 +137,6 @@ a {
   color: #4da6ff;
 }
 
-a:hover {
-  color: #fff;
-}
-
 .links a {
   font-size: 18px;
   margin-right: 20px;
@@ -164,7 +150,7 @@ a:hover {
   }
 
   .hero-image img {
-    width: 260px;
-    height: 260px;
+    width: 300px;
+    height: 300px;
   }
 }

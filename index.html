@@ -3,85 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <title>Ahmed Samak | Portfolio</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="./style.css">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Personal Presentation</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#work">Work Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </ul>
-  </nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#home">Personal Presentation</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work">Work Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+</nav>
 
-  <!-- HERO -->
-  <section class="section hero" id="home">
-    <div class="hero-text">
-      <h1>Hello, I'm<br><span>Ahmed Samak</span></h1>
+<!-- HERO -->
+<section class="section hero" id="home">
+  <div class="hero-text">
+    <h1>Hello, I'm<br><span>Ahmed Samak</span></h1>
+    <p>
+      Mobile Application Developer specializing in Flutter,
+      passionate about building modern, scalable, and user-friendly applications.
+    </p>
+  </div>
+
+  <div class="hero-image">
+    <img src="./images/profile.jpeg" alt="Ahmed Samak">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section dark" id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a motivated Mobile Application Developer with a strong passion for technology
+    and problem solving. I specialize in Flutter development and enjoy building
+    high-performance mobile applications with clean architecture and smooth user experiences.
+  </p>
+  <p>
+    I am currently studying Artificial Intelligence, which has strengthened my
+    understanding of programming fundamentals, data structures, and software development
+    concepts. This background allows me to think analytically and design efficient solutions.
+  </p>
+  <p>
+    I have experience working with UI/UX design, state management, API integration,
+    and debugging. I am always eager to learn new technologies, improve my skills,
+    and contribute to impactful projects that provide real value to users.
+  </p>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <h2>My Education</h2>
+  <p>
+    Bachelor’s Degree in Artificial Intelligence<br>
+    <strong>Menoufia National University</strong>
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section dark" id="skills">
+  <h2>Personal Skills</h2>
+  <div class="skills">
+    <span>Flutter Development</span>
+    <span>UI / UX Design</span>
+    <span>State Management</span>
+    <span>API Integration</span>
+    <span>Clean Code</span>
+    <span>Git & GitHub</span>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <h2>Work Experience</h2>
+  <p>
+    <strong>Flutter & Mobile App Development Intern – DEPI</strong><br>
+    Worked on building responsive and user-friendly mobile applications,
+    focusing on UI design, state management, and API integration.
+  </p>
+  <br>
+  <p>
+    <strong>Data Analysis & Machine Learning Intern – NTI</strong><br>
+    Gained hands-on experience in data analysis and machine learning concepts,
+    enhancing my ability to build smarter and more efficient applications.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section class="section dark" id="projects">
+  <h2>Project Portfolio</h2>
+
+  <div class="projects">
+
+    <!-- BMI -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="./images/bmi1.jpeg">
+        <img src="./images/bmi2.jpeg">
+      </div>
+      <h3>BMI Calculator App</h3>
       <p>
-        I am a Mobile Application Developer specializing in Flutter,
-        passionate about building modern, high-performance applications.
+        A Flutter application that calculates Body Mass Index,
+        focusing on clean UI, input handling, and simple logic.
       </p>
     </div>
 
-    <div class="hero-image">
-      <img src="./images/profile.jpeg" alt="Ahmed Samak">
+    <!-- NOTES -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="./images/notes1.jpeg">
+        <img src="./images/notes2.jpeg">
+        <img src="./images/notes3.jpeg">
+        <img src="./images/notes4.jpeg">
+      </div>
+      <h3>Notes App</h3>
+      <p>
+        A notes application that allows users to create, edit, and delete notes,
+        with password protection for enhanced privacy.
+      </p>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="section dark" id="about">
-    <h2>About Me</h2>
-    <p>
-      Currently studying Artificial Intelligence with a strong focus on
-      programming fundamentals and software development.
-    </p>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section" id="education">
-    <h2>My Education</h2>
-    <p>
-      Bachelor’s Degree in Artificial Intelligence<br>
-      Menoufia National University
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section dark" id="skills">
-    <h2>Personal Skills</h2>
-    <div class="skills">
-      <span>Flutter</span>
-      <span>UI / UX</span>
-      <span>State Management</span>
-      <span>API Integration</span>
-      <span>Git & GitHub</span>
-    </div>
-  </section>
-
-  <!-- WORK -->
-  <section class="section" id="work">
-    <h2>Work Experience</h2>
-    <p>
-      Flutter & Mobile App Development Intern – DEPI<br>
-      Data Analysis & Machine Learning Intern – NTI
-    </p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section dark" id="projects">
-    <h2>Project Portfolio</h2>
-    <p>BMI Calculator App • Notes App • More coming...</p>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>

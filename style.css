@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +15,7 @@ body {
   color: #eee;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -37,14 +38,14 @@ body {
 .navbar ul li a {
   color: #bbb;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .navbar ul li a:hover {
   color: #fff;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 .section {
   min-height: 100vh;
   padding: 120px 10%;
@@ -54,7 +55,14 @@ body {
   background: #252525;
 }
 
-/* HERO */
+.section p {
+  font-size: 17px;       /* كبرنا الخط */
+  line-height: 1.8;
+  color: #ddd;
+  max-width: 900px;
+}
+
+/* ================= HERO ================= */
 .hero {
   display: flex;
   align-items: center;
@@ -75,10 +83,10 @@ body {
   margin-top: 20px;
   max-width: 500px;
   color: #aaa;
-  font-size: 16px;
+  font-size: 18px;       /* أكبر شوية */
 }
 
-/* PROFILE IMAGE */
+/* ================= PROFILE IMAGE ================= */
 .hero-image img {
   width: 260px;
   height: 260px;
@@ -88,23 +96,23 @@ body {
   box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
-/* HEADINGS */
+/* ================= HEADINGS ================= */
 h2 {
   font-size: 46px;
   margin-bottom: 25px;
 }
 
-/* SKILLS */
+/* ================= SKILLS ================= */
 .skills span {
   display: inline-block;
   background: #333;
-  padding: 10px 20px;
-  margin: 8px;
-  border-radius: 20px;
-  font-size: 14px;
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 25px;
+  font-size: 15px;       /* أكبر شوية */
 }
 
-/* PROJECTS */
+/* ================= PROJECTS ================= */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -130,24 +138,26 @@ h2 {
   overflow-x: auto;
 }
 
+/* 👇 صغرنا الصور */
 .project-images img {
-  height: 160px;
+  height: 110px;          /* الصورة أصغر */
   border-radius: 10px;
   object-fit: cover;
 }
 
 .project-card h3 {
   margin: 15px;
-  font-size: 22px;
+  font-size: 24px;        /* أكبر */
 }
 
 .project-card p {
   margin: 0 15px;
-  color: #aaa;
-  font-size: 14px;
+  color: #bbb;
+  font-size: 16px;        /* أكبر */
+  line-height: 1.7;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -156,5 +166,10 @@ h2 {
 
   .hero-text h1 {
     font-size: 42px;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
   }
 }

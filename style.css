@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +14,7 @@ body {
   color: #eee;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -38,14 +37,14 @@ body {
 .navbar ul li a {
   color: #bbb;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .navbar ul li a:hover {
   color: #fff;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 .section {
   min-height: 100vh;
   padding: 120px 10%;
@@ -55,14 +54,15 @@ body {
   background: #252525;
 }
 
+/* 👇 كبرنا خط الشرح */
 .section p {
-  font-size: 17px;       /* كبرنا الخط */
-  line-height: 1.8;
+  font-size: 19px;
+  line-height: 1.9;
   color: #ddd;
   max-width: 900px;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
   display: flex;
   align-items: center;
@@ -72,7 +72,6 @@ body {
 
 .hero-text h1 {
   font-size: 60px;
-  line-height: 1.1;
 }
 
 .hero-text span {
@@ -80,84 +79,75 @@ body {
 }
 
 .hero-text p {
-  margin-top: 20px;
-  max-width: 500px;
+  font-size: 20px;
   color: #aaa;
-  font-size: 18px;       /* أكبر شوية */
+  margin-top: 20px;
 }
 
-/* ================= PROFILE IMAGE ================= */
+/* IMAGE */
 .hero-image img {
   width: 260px;
   height: 260px;
-  object-fit: cover;
   border-radius: 50%;
+  object-fit: cover;
   border: 4px solid #333;
   box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
-/* ================= HEADINGS ================= */
+/* HEADINGS */
 h2 {
-  font-size: 46px;
-  margin-bottom: 25px;
+  font-size: 48px;
+  margin-bottom: 30px;
 }
 
-/* ================= SKILLS ================= */
+/* SKILLS */
 .skills span {
-  display: inline-block;
   background: #333;
-  padding: 12px 22px;
+  padding: 14px 24px;
   margin: 10px;
   border-radius: 25px;
-  font-size: 15px;       /* أكبر شوية */
+  font-size: 16px;
+  display: inline-block;
 }
 
-/* ================= PROJECTS ================= */
+/* PROJECTS */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .project-card {
   background: #1c1c1c;
+  padding: 25px;
   border-radius: 15px;
-  padding-bottom: 20px;
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-}
-
-.project-images {
-  display: flex;
-  gap: 10px;
-  padding: 15px;
-  overflow-x: auto;
-}
-
-/* 👇 صغرنا الصور */
-.project-images img {
-  height: 110px;          /* الصورة أصغر */
-  border-radius: 10px;
-  object-fit: cover;
 }
 
 .project-card h3 {
-  margin: 15px;
-  font-size: 24px;        /* أكبر */
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 .project-card p {
-  margin: 0 15px;
-  color: #bbb;
-  font-size: 16px;        /* أكبر */
-  line-height: 1.7;
+  font-size: 18px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* LINKS */
+a {
+  color: #4da6ff;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -166,10 +156,5 @@ h2 {
 
   .hero-text h1 {
     font-size: 42px;
-  }
-
-  .hero-image img {
-    width: 220px;
-    height: 220px;
   }
 }

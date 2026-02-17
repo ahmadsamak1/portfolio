@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -76,17 +75,23 @@ body {
   margin-top: 20px;
   max-width: 500px;
   color: #aaa;
+  font-size: 16px;
 }
 
+/* PROFILE IMAGE */
 .hero-image img {
-  width: 320px;
-  border-radius: 10px;
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #333;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
 /* HEADINGS */
 h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 46px;
+  margin-bottom: 25px;
 }
 
 /* SKILLS */
@@ -99,6 +104,49 @@ h2 {
   font-size: 14px;
 }
 
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: #1c1c1c;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-images {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  overflow-x: auto;
+}
+
+.project-images img {
+  height: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 15px;
+  font-size: 22px;
+}
+
+.project-card p {
+  margin: 0 15px;
+  color: #aaa;
+  font-size: 14px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero {
@@ -107,10 +155,6 @@ h2 {
   }
 
   .hero-text h1 {
-    font-size: 45px;
-  }
-
-  .hero-image img {
-    width: 260px;
+    font-size: 42px;
   }
 }

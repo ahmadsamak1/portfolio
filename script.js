@@ -1,4 +1,4 @@
-  // Custom cursor
+// Custom cursor
   const cur = document.getElementById('cur');
   const curR = document.getElementById('curR');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -13,7 +13,6 @@
     requestAnimationFrame(animCursor);
   }
   animCursor();
-
   document.querySelectorAll('a, button, .skill-pill, .exp-item').forEach(el => {
     el.addEventListener('mouseenter', () => {
       cur.style.width = '18px';
@@ -28,7 +27,6 @@
       curR.style.height = '36px';
     });
   });
-
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver((entries) => {
@@ -40,7 +38,6 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(r => obs.observe(r));
-
   // Active nav highlight
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');

@@ -116,7 +116,8 @@ if (window.THREE) {
   human.add(rLeg);
 
   human.position.set(0, -0.15, 0);
-  human.scale.set(0.95, 0.95, 0.95);
+  // Smaller so it stays in the background behind the content
+  human.scale.set(0.6, 0.6, 0.6);
   scene.add(human);
 
   // ── Swirling multi-color aura ring around the head ──
@@ -175,10 +176,11 @@ if (window.THREE) {
   const introDuration = 1800;
   function introEase(t) { return 1 - Math.pow(1 - t, 3); }
 
+  // Full 360° spin driven by mouse position across the whole window
   let targetRotY = 0;
   let mouseX = 0;
   window.addEventListener('mousemove', (e) => {
-    mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+    mouseX = (e.clientX / window.innerWidth) * 2 - 1; // -1 .. 1
   });
 
   function animate(t) {
@@ -191,9 +193,9 @@ if (window.THREE) {
     camera.position.z = 11.5 - eased * 3.0; // 11.5 -> 8.5
     camera.position.y = 0.3 - eased * 0.1;
 
-    // Idle motion
-    targetRotY = mouseX * 0.22 + Math.sin(t * 0.00022) * 0.12;
-    human.rotation.y += (targetRotY - human.rotation.y) * 0.03;
+    // Idle motion — mouseX now spans a full 360° (2π) turn across the screen width
+    targetRotY = mouseX * Math.PI;
+    human.rotation.y += (targetRotY - human.rotation.y) * 0.06;
     human.position.y = -0.15 + Math.sin(t * 0.0008) * 0.1;
 
     // Aura ring swirl
@@ -379,3 +381,5 @@ window.addEventListener('scroll', () => {
     a.style.color = a.getAttribute('href') === '#' + current ? 'var(--cream)' : '';
   });
 });
+
+

@@ -238,7 +238,7 @@
     width: 100%;
     max-width: none;
     display: grid;
-    grid-template-columns: minmax(360px, 460px) 1fr;
+    grid-template-columns: minmax(360px, 510px) 1fr;
     align-items: center;
     gap: 100px;
   }
@@ -246,7 +246,7 @@
   .hero-left {
     position: relative;
     width: 100%;
-    max-width: 460px;
+    max-width: 510px;
     padding: 44px 40px;
     border-radius: 28px;
     background: linear-gradient(180deg, rgba(17,17,24,.22), rgba(17,17,24,.06));
@@ -965,7 +965,4 @@
     .edu-card { grid-template-columns:1fr; gap:20px; padding:32px 24px; }
     .edu-year { writing-mode:horizontal-tb; }
     footer { flex-direction:column; gap:12px; text-align:center; }
-
-    /* Calmer, more even aurora glow on smaller screens */
-    #aurora span { opacity: .3; filter: blur(90px); }
   }

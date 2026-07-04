@@ -1,4 +1,50 @@
-// Custom cursor
+// Animated particle background
+  if (window.particlesJS) {
+    particlesJS('particles-bg', {
+      particles: {
+        number: { value: 70, density: { enable: true, value_area: 900 } },
+        color: { value: ['#c8ff5f', '#5fffc8', '#ffffff'] },
+        shape: { type: 'circle' },
+        opacity: {
+          value: 0.35,
+          random: true,
+          anim: { enable: true, speed: 0.4, opacity_min: 0.05, sync: false }
+        },
+        size: {
+          value: 2.2,
+          random: true,
+          anim: { enable: false }
+        },
+        line_linked: {
+          enable: true,
+          distance: 140,
+          color: '#c8ff5f',
+          opacity: 0.12,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 0.6,
+          direction: 'none',
+          random: true,
+          straight: false,
+          out_mode: 'out',
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: 'window',
+        events: {
+          onhover: { enable: false },
+          onclick: { enable: false },
+          resize: true
+        }
+      },
+      retina_detect: true
+    });
+  }
+
+  // Custom cursor
   const cur = document.getElementById('cur');
   const curR = document.getElementById('curR');
   let mx = 0, my = 0, rx = 0, ry = 0;

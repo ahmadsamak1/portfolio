@@ -121,6 +121,20 @@
     gap: 60px;
   }
 
+  /* hero 3D chrome figure (behind hero content) */
+  #home { position: relative; overflow: hidden; }
+  #hero-3d {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  #hero-3d canvas { display: block; }
+  .hero-left, .hero-visual {
+    position: relative;
+    z-index: 1;
+  }
+
   .hero-label {
     display: inline-flex;
     align-items: center;

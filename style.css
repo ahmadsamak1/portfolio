@@ -197,34 +197,72 @@
   }
 
   .hero-topline {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 26px;
+    gap: 16px;
+    margin-bottom: 30px;
+    padding: 10px 22px 10px 10px;
+    border-radius: 100px;
+    background: var(--card-bg-glass);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     opacity: 0;
     animation: fadeUp .7s .15s forwards;
+    transition: border-color .35s, transform .35s;
+  }
+  .hero-topline:hover {
+    border-color: rgba(185,133,255,.35);
+    transform: translateY(-2px);
   }
 
   .hero-mini-avatar {
-    width: 46px;
-    height: 46px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     overflow: hidden;
-    border: 1.5px solid var(--accent);
-    box-shadow: 0 0 18px rgba(185,133,255,.45);
     flex-shrink: 0;
+    position: relative;
+    padding: 2.5px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2) 55%, var(--accent3));
+    box-shadow: 0 0 22px rgba(185,133,255,.4), 0 4px 18px rgba(0,0,0,.35);
+  }
+  .hero-mini-avatar .avatar-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--ink);
   }
   .hero-mini-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(10%);
+    object-position: top center;
+    filter: grayscale(8%) contrast(1.05);
+  }
+  .hero-mini-avatar .status-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #3ee089;
+    border: 2.5px solid var(--ink);
+    box-shadow: 0 0 10px rgba(62,224,137,.7);
+  }
+
+  .hero-id-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
 
   .hero-label {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -232,8 +270,14 @@
   }
   .hero-label::before {
     content:'';
-    width: 22px; height: 1px;
+    width: 16px; height: 1px;
     background: var(--accent);
+  }
+
+  .hero-avail {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: .3px;
   }
 
   .hero-name {

@@ -316,10 +316,10 @@
   /* large standalone profile photo, separate from the name block */
   .hero-photo-card {
     position: absolute;
-    top: 22%;
+    top: 16%;
     right: 4%;
-    width: 340px;
-    height: 340px;
+    width: 390px;
+    height: 480px;
     border-radius: 40px;
     padding: 6px;
     background: linear-gradient(135deg, var(--accent), var(--accent2) 55%, var(--accent3));
@@ -329,12 +329,21 @@
     opacity: 0;
     animation: fadeUp .8s .3s forwards, bobY 6s ease-in-out infinite 1.5s;
   }
+  .hero-photo-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    background: var(--card-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .hero-photo-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 34px;
+    object-fit: contain;
+    object-position: center;
     filter: grayscale(6%) contrast(1.05);
     display: block;
   }
@@ -481,8 +490,8 @@
     opacity: 0;
     animation: fadeUp .7s .8s forwards;
   }
-  .badge-flutter { right: 2%; top: 4%; animation: fadeUp .7s .8s forwards, bobY 4s infinite ease-in-out 1.5s; }
-  .badge-uiux { right: 2%; bottom: 6%; left: auto; animation: fadeUp .7s .95s forwards, bobY 5s infinite ease-in-out reverse 1.5s; }
+  .badge-flutter { right: 2%; top: 3%; animation: fadeUp .7s .8s forwards, bobY 4s infinite ease-in-out 1.5s; }
+  .badge-uiux { right: 2%; bottom: 4%; left: auto; animation: fadeUp .7s .95s forwards, bobY 5s infinite ease-in-out reverse 1.5s; }
   .badge-label { font-size: 11px; color: var(--muted); letter-spacing: 1px; margin-bottom: 4px; }
   .badge-val { font-family:'Syne',sans-serif; font-weight:700; font-size: 16px; }
   .badge-val.green { color: var(--accent); }
@@ -948,8 +957,8 @@
     .hero-left { max-width: none; }
     .hero-right { height: 380px; order:-1; }
     .badge-flutter, .badge-uiux { display:none; }
-    .hero-photo-card { width:200px; height:200px; border-radius:32px; top:2%; right:4%; }
-    .hero-photo-card img { border-radius:26px; }
+    .hero-photo-card { width:220px; height:280px; border-radius:32px; top:2%; right:4%; }
+    .hero-photo-inner { border-radius:26px; }
     .about-grid, .contact-grid { grid-template-columns:1fr; gap:40px; }
     .section-wrap { padding:80px 24px; }
     .edu-card { grid-template-columns:1fr; gap:20px; padding:32px 24px; }

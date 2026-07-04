@@ -1,4 +1,4 @@
-  :root {
+:root {
     --ink: #0a0a0f;
     --cream: #f5f2ec;
     --accent: #c8ff5f;
@@ -426,6 +426,7 @@
     transition: all .4s;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   .proj-card:hover {
     border-color: rgba(200,255,95,.3);
@@ -446,6 +447,56 @@
     transition:transform .3s;
   }
   .proj-imgs img:hover { transform:scale(1.06); }
+
+  /* placeholder slots for images not added yet */
+  .img-placeholder {
+    height: 140px;
+    width: 110px;
+    border-radius: 12px;
+    border: 1.5px dashed var(--border);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: .5px;
+    text-align: center;
+    transition: border-color .3s, color .3s;
+  }
+  .img-placeholder .plus {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 300;
+  }
+  .img-placeholder:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* dashed marker for text still to be written */
+  .proj-desc.placeholder-text {
+    border-left: 2px dashed var(--border);
+    padding-left: 12px;
+    font-style: italic;
+  }
+
+  .todo-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: rgba(200,255,95,.1);
+    border: 1px solid rgba(200,255,95,.3);
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 100px;
+    z-index: 2;
+  }
 
   .proj-body { padding: 24px 28px 32px; flex:1; display:flex; flex-direction:column; }
   .proj-num { font-size:11px; color:var(--muted); letter-spacing:2px; margin-bottom:12px; }

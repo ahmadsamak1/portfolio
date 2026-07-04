@@ -116,7 +116,7 @@ if (window.THREE) {
   human.add(rLeg);
 
   human.position.set(0, -0.15, 0);
-  human.scale.set(1.35, 1.35, 1.35);
+  human.scale.set(0.95, 0.95, 0.95);
   scene.add(human);
 
   // ── Swirling multi-color aura ring around the head ──
@@ -162,12 +162,10 @@ if (window.THREE) {
 
   human.add(auraGroup);
 
-  // ── Horizontal placement: keep the figure inside the right
-  // half of the hero on wide screens, centered on narrow ones ──
+  // ── Horizontal placement: keep the figure centered in the hero ──
   function layoutFigure() {
-    const wide = window.innerWidth > 900;
-    human.position.x = wide ? 2.4 : 0;
-    camera.position.x = wide ? 0.4 : 0;
+    human.position.x = 0;
+    camera.position.x = 0;
   }
   layoutFigure();
   window.addEventListener('resize', layoutFigure);
@@ -232,9 +230,9 @@ if (window.particlesJS) {
       color: { value: ['#b985ff', '#40e0ff', '#ffcb57', '#ffffff'] },
       shape: { type: 'circle' },
       opacity: {
-        value: 0.45,
+        value: 0.65,
         random: true,
-        anim: { enable: true, speed: 0.7, opacity_min: 0.05, sync: false }
+        anim: { enable: true, speed: 0.7, opacity_min: 0.1, sync: false }
       },
       size: {
         value: 2.6,

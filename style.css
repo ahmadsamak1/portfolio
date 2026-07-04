@@ -216,7 +216,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 120px 60px 60px;
+    padding: 120px 60px 60px 40px;
     overflow: hidden;
   }
 
@@ -236,15 +236,17 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 1200px;
+    max-width: none;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(360px, 460px) 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
   }
 
   .hero-left {
     position: relative;
+    width: 100%;
+    max-width: 460px;
     padding: 44px 40px;
     border-radius: 28px;
     background: linear-gradient(180deg, rgba(17,17,24,.22), rgba(17,17,24,.06));
@@ -314,11 +316,11 @@
   /* large standalone profile photo, separate from the name block */
   .hero-photo-card {
     position: absolute;
-    top: 2%;
+    top: 22%;
     right: 4%;
-    width: 280px;
+    width: 340px;
     height: 340px;
-    border-radius: 50% 50% 42% 42% / 55% 55% 45% 45%;
+    border-radius: 40px;
     padding: 6px;
     background: linear-gradient(135deg, var(--accent), var(--accent2) 55%, var(--accent3));
     box-shadow: 0 0 46px rgba(185,133,255,.4), 0 24px 65px rgba(0,0,0,.45);
@@ -332,7 +334,7 @@
     height: 100%;
     object-fit: cover;
     object-position: top center;
-    border-radius: 50% 50% 42% 42% / 55% 55% 45% 45%;
+    border-radius: 34px;
     filter: grayscale(6%) contrast(1.05);
     display: block;
   }
@@ -479,8 +481,8 @@
     opacity: 0;
     animation: fadeUp .7s .8s forwards;
   }
-  .badge-flutter { right: 6%; top: 10%; animation: fadeUp .7s .8s forwards, bobY 4s infinite ease-in-out 1.5s; }
-  .badge-uiux { left: 4%; bottom: 12%; animation: fadeUp .7s .95s forwards, bobY 5s infinite ease-in-out reverse 1.5s; }
+  .badge-flutter { right: 2%; top: 4%; animation: fadeUp .7s .8s forwards, bobY 4s infinite ease-in-out 1.5s; }
+  .badge-uiux { right: 2%; bottom: 6%; left: auto; animation: fadeUp .7s .95s forwards, bobY 5s infinite ease-in-out reverse 1.5s; }
   .badge-label { font-size: 11px; color: var(--muted); letter-spacing: 1px; margin-bottom: 4px; }
   .badge-val { font-family:'Syne',sans-serif; font-weight:700; font-size: 16px; }
   .badge-val.green { color: var(--accent); }
@@ -943,10 +945,11 @@
     .nav-links { display:none; }
     #home { padding:110px 24px 60px; }
     .hero-inner { grid-template-columns:1fr; gap:20px; }
+    .hero-left { max-width: none; }
     .hero-right { height: 380px; order:-1; }
     .badge-flutter, .badge-uiux { display:none; }
-    .hero-photo-card { width:170px; height:200px; border-radius:50% 50% 42% 42% / 55% 55% 45% 45%; top:2%; right:4%; }
-    .hero-photo-card img { border-radius:50% 50% 42% 42% / 55% 55% 45% 45%; }
+    .hero-photo-card { width:200px; height:200px; border-radius:32px; top:2%; right:4%; }
+    .hero-photo-card img { border-radius:26px; }
     .about-grid, .contact-grid { grid-template-columns:1fr; gap:40px; }
     .section-wrap { padding:80px 24px; }
     .edu-card { grid-template-columns:1fr; gap:20px; padding:32px 24px; }

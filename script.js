@@ -18,15 +18,19 @@
     key.position.set(3, 5, 6);
     scene.add(key);
 
-    const rimGreen = new THREE.PointLight(0xc8ff5f, 14, 25, 2);
+    const rimGreen = new THREE.PointLight(0xb985ff, 16, 25, 2);
     rimGreen.position.set(-3.5, 1.5, 3.5);
     scene.add(rimGreen);
 
-    const rimCyan = new THREE.PointLight(0x5fffc8, 12, 25, 2);
+    const rimCyan = new THREE.PointLight(0x40e0ff, 14, 25, 2);
     rimCyan.position.set(3.5, -1, 3);
     scene.add(rimCyan);
 
-    const backLight = new THREE.PointLight(0xffffff, 6, 20, 2);
+    const rimGold = new THREE.PointLight(0xffcb57, 10, 22, 2);
+    rimGold.position.set(0, 3, 4);
+    scene.add(rimGold);
+
+    const backLight = new THREE.PointLight(0xffffff, 7, 20, 2);
     backLight.position.set(0, 2, -5);
     scene.add(backLight);
 
@@ -91,6 +95,8 @@
       human.position.y = -0.9 + Math.sin(t * 0.0008) * 0.12;
       rimGreen.position.x = -3.5 + Math.sin(t * 0.0005) * 1.2;
       rimCyan.position.x = 3.5 + Math.cos(t * 0.0006) * 1.2;
+      rimGold.position.x = Math.sin(t * 0.0004) * 2.5;
+      rimGold.position.y = 3 + Math.cos(t * 0.0004) * 0.8;
       renderer.render(scene, camera);
     }
     requestAnimationFrame(animate);
@@ -106,29 +112,29 @@
   if (window.particlesJS) {
     particlesJS('particles-bg', {
       particles: {
-        number: { value: 70, density: { enable: true, value_area: 900 } },
-        color: { value: ['#c8ff5f', '#5fffc8', '#ffffff'] },
+        number: { value: 110, density: { enable: true, value_area: 850 } },
+        color: { value: ['#b985ff', '#40e0ff', '#ffcb57', '#ffffff'] },
         shape: { type: 'circle' },
         opacity: {
-          value: 0.35,
+          value: 0.45,
           random: true,
-          anim: { enable: true, speed: 0.4, opacity_min: 0.05, sync: false }
+          anim: { enable: true, speed: 0.7, opacity_min: 0.05, sync: false }
         },
         size: {
-          value: 2.2,
+          value: 2.6,
           random: true,
-          anim: { enable: false }
+          anim: { enable: true, speed: 1.5, size_min: 0.5, sync: false }
         },
         line_linked: {
           enable: true,
-          distance: 140,
-          color: '#c8ff5f',
-          opacity: 0.12,
+          distance: 150,
+          color: '#b985ff',
+          opacity: 0.16,
           width: 1
         },
         move: {
           enable: true,
-          speed: 0.6,
+          speed: 0.9,
           direction: 'none',
           random: true,
           straight: false,

@@ -60,7 +60,7 @@
     height: 48vw;
     border-radius: 50%;
     filter: blur(110px);
-    opacity: .42;
+    opacity: .35;
     mix-blend-mode: screen;
   }
   #aurora .b1 {
@@ -954,7 +954,8 @@
     .nav-links { display:none; }
     #home { padding:110px 24px 60px; }
     .hero-inner { grid-template-columns:1fr; gap:20px; }
-    .hero-left { max-width: none; }
+    .hero-left { max-width: none; padding: 36px 28px; }
+    .hero-name { font-size: clamp(40px, 12vw, 58px); letter-spacing: -2px; }
     .hero-right { height: 380px; order:-1; }
     .badge-flutter, .badge-uiux { display:none; }
     .hero-photo-card { width:220px; height:280px; border-radius:32px; top:2%; right:4%; }
@@ -964,4 +965,7 @@
     .edu-card { grid-template-columns:1fr; gap:20px; padding:32px 24px; }
     .edu-year { writing-mode:horizontal-tb; }
     footer { flex-direction:column; gap:12px; text-align:center; }
+
+    /* Calmer, more even aurora glow on smaller screens */
+    #aurora span { opacity: .3; filter: blur(90px); }
   }

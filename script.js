@@ -78,8 +78,8 @@
     rArm.rotation.z = -0.22;
     human.add(rArm);
 
-    human.position.set(1.1, -0.9, 0);
-    human.scale.set(1.15, 1.15, 1.15);
+    human.position.set(0.6, -0.7, 0);
+    human.scale.set(1.45, 1.45, 1.45);
     scene.add(human);
 
     let targetRotY = 0;
@@ -90,7 +90,7 @@
 
     function animate(t) {
       requestAnimationFrame(animate);
-      targetRotY = mouseX * 0.35 + Math.sin(t * 0.00025) * 0.25;
+      targetRotY = mouseX * 0.35 + Math.sin(t * 0.00025) * 0.25 + t * 0.00007;
       human.rotation.y += (targetRotY - human.rotation.y) * 0.03;
       human.position.y = -0.9 + Math.sin(t * 0.0008) * 0.12;
       rimGreen.position.x = -3.5 + Math.sin(t * 0.0005) * 1.2;

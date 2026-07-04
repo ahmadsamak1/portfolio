@@ -303,6 +303,57 @@ document.querySelectorAll('a, button, .skill-pill, .exp-item').forEach(el => {
 });
 
 // ============================================================
+// Preloader — cinematic curtain reveal
+// ============================================================
+window.addEventListener('load', () => {
+  const pre = document.getElementById('preloader');
+  if (pre) {
+    setTimeout(() => {
+      pre.classList.add('done');
+      setTimeout(() => pre.remove(), 700);
+    }, 900);
+  }
+});
+
+// ============================================================
+// Nav — compact + opaque once the page has scrolled
+// ============================================================
+const navEl = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  if (navEl) navEl.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ============================================================
+// Magnetic buttons — subtle pull toward the cursor
+// ============================================================
+document.querySelectorAll('.btn, .social-btn').forEach(el => {
+  el.addEventListener('mousemove', (e) => {
+    const r = el.getBoundingClientRect();
+    const relX = e.clientX - r.left - r.width / 2;
+    const relY = e.clientY - r.top - r.height / 2;
+    el.style.transform = `translate(${relX * 0.18}px, ${relY * 0.35}px)`;
+  });
+  el.addEventListener('mouseleave', () => {
+    el.style.transform = '';
+  });
+});
+
+// ============================================================
+// Project cards — soft 3D tilt following the cursor
+// ============================================================
+document.querySelectorAll('.proj-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const r = card.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - 0.5;
+    const py = (e.clientY - r.top) / r.height - 0.5;
+    card.style.transform = `translateY(-8px) rotateX(${py * -6}deg) rotateY(${px * 8}deg)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
+
+// ============================================================
 // Scroll reveal
 // ============================================================
 const reveals = document.querySelectorAll('.reveal');

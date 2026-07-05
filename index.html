@@ -4,304 +4,675 @@
 <meta charset="UTF-8">
 <title>Ahmed Samak | Flutter Developer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-<!-- Preloader curtain — cinematic reveal on first load -->
+<!-- PRELOADER -->
 <div id="preloader">
-  <div class="preloader-mark">AS<span>.</span></div>
-  <div class="preloader-bar"><span></span></div>
+    <div class="preloader-mark">
+        AS<span>.</span>
+    </div>
+
+    <div class="preloader-bar">
+        <span></span>
+    </div>
 </div>
 
-<!-- Custom cursor -->
+<!-- CURSOR -->
 <div class="cursor" id="cur"></div>
 <div class="cursor-ring" id="curR"></div>
 
-<!-- Ambient aurora glow (full-page flashy background wash) -->
+<!-- AURORA -->
 <div id="aurora">
-  <span class="b1"></span>
-  <span class="b2"></span>
-  <span class="b3"></span>
+    <span class="b1"></span>
+    <span class="b2"></span>
+    <span class="b3"></span>
 </div>
 
-<!-- Animated particle background (fixed across whole page) -->
+<!-- PARTICLES -->
 <div id="particles-bg"></div>
 
-<!-- NAV -->
+<!-- NAVBAR -->
+
 <nav>
-  <a class="logo" href="#home">AS<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+
+<a class="logo" href="#home">
+AS<span>.</span>
+</a>
+
+<ul class="nav-links">
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#experience">Experience</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
 </nav>
 
 <!-- HERO -->
+
 <section id="home">
-  <div id="hero-3d"></div>
 
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-topline">
-        <span class="status-dot"></span>
-        <div class="hero-id-text">
-          <div class="hero-label">Flutter Developer</div>
-          <div class="hero-avail">Available for new projects</div>
-        </div>
-      </div>
-      <h1 class="hero-name">
-        <span class="line line-1">Ahmed</span>
-        <span class="line line-2 highlight">Samak</span>
-      </h1>
-      <p class="hero-sub line line-3">Building modern, scalable, and high-quality mobile applications with excellent user experience.</p>
-      <div class="hero-buttons line line-4">
-        <a href="#projects" class="btn btn-primary">View Projects →</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-      </div>
-    </div>
+<div id="hero-3d"></div>
 
-    <div class="hero-right">
-      <div class="hero-photo-card">
-        <div class="hero-photo-inner">
-          <img src="./images/name.jpeg" alt="Ahmed Samak">
-        </div>
-      </div>
-      <div class="float-badge badge-flutter">
-        <div class="badge-label">SPECIALIZATION</div>
-        <div class="badge-val green">Flutter</div>
-      </div>
-      <div class="float-badge badge-uiux">
-        <div class="badge-label">FOCUS</div>
-        <div class="badge-val">UI / UX</div>
-      </div>
-    </div>
-  </div>
+<div class="hero-inner">
 
-  <div class="scroll-cue">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
+<div class="hero-left">
+
+<div class="hero-topline">
+
+<span class="status-dot"></span>
+
+<div class="hero-id-text">
+
+<div class="hero-label">
+Flutter Developer
+</div>
+
+<div class="hero-avail">
+Available for new projects
+</div>
+
+</div>
+
+</div>
+
+<h1 class="hero-name">
+
+<span class="line line-1">
+Ahmed
+</span>
+
+<span class="line line-2 highlight">
+Samak
+</span>
+
+</h1>
+
+<p class="hero-sub line line-3">
+
+Building modern, scalable, and high-quality mobile applications with excellent user experience.
+
+</p>
+
+<div class="hero-buttons line line-4">
+
+<a href="#projects" class="btn btn-primary">
+View Projects →
+</a>
+
+<a href="#contact" class="btn btn-ghost">
+Get in Touch
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-photo-card">
+
+<div class="hero-photo-inner">
+
+<img src="./images/name.jpeg" alt="Ahmed Samak">
+
+</div>
+
+</div>
+
+<div class="float-badge badge-flutter">
+
+<div class="badge-label">
+SPECIALIZATION
+</div>
+
+<div class="badge-val green">
+Flutter
+</div>
+
+</div>
+
+<div class="float-badge badge-uiux">
+
+<div class="badge-label">
+FOCUS
+</div>
+
+<div class="badge-val">
+UI / UX
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll-cue">
+
+<span>Scroll</span>
+
+<div class="scroll-line"></div>
+
+</div>
+
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section-wrap">
-  <div class="reveal">
-    <div class="tag">About</div>
-    <h2 class="sec-title">Who I Am</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>I'm a motivated Mobile Application Developer with a strong passion for software development and problem solving. I focus on Flutter development and building clean, maintainable, and scalable apps.</p>
-        <p>Studying Artificial Intelligence helped me build strong foundations in programming, data structures, and analytical thinking — skills I bring to every project I work on.</p>
-        <p>I care about the details: performance, pixel-perfect UI, and clean code that lasts.</p>
-      </div>
-      <div class="about-stats">
-        <div class="stat-box">
-          <div class="stat-num">2+</div>
-          <div class="stat-label">Years Learning Flutter</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">Skills Mastered</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">2</div>
-          <div class="stat-label">Internships Completed</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">AI</div>
-          <div class="stat-label">Academic Background</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
+<section id="about" class="section-wrap">
+
+<div class="reveal">
+
+<div class="tag">
+About
+</div>
+
+<h2 class="sec-title">
+Who I Am
+</h2>
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<p>
+
+I'm a motivated Mobile Application Developer with a strong passion for software development and problem solving. I focus on Flutter development and building clean, maintainable, and scalable apps.
+
+</p>
+
+<p>
+
+Studying Artificial Intelligence helped me build strong foundations in programming, data structures, and analytical thinking — skills I bring to every project I work on.
+
+</p>
+
+<p>
+
+I care about performance, pixel-perfect UI, clean architecture, and writing maintainable code.
+
+</p>
+
+</div>
+
+<div class="about-stats">
+
+<div class="stat-box">
+<div class="stat-num">2+</div>
+<div class="stat-label">Years Learning Flutter</div>
+</div>
+
+<div class="stat-box">
+<div class="stat-num">5+</div>
+<div class="stat-label">Skills Mastered</div>
+</div>
+
+<div class="stat-box">
+<div class="stat-num">2</div>
+<div class="stat-label">Internships Completed</div>
+</div>
+
+<div class="stat-box">
+<div class="stat-num">AI</div>
+<div class="stat-label">Academic Background</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 <!-- SKILLS -->
+
 <section id="skills" class="section-wrap">
-  <div class="reveal">
-    <div class="tag">Skills</div>
-    <h2 class="sec-title">What I Know</h2>
-    <div class="skills-wrap">
-      <div class="skill-pill"><span>Flutter</span></div>
-      <div class="skill-pill"><span>Dart</span></div>
-      <div class="skill-pill"><span>UI / UX Design</span></div>
-      <div class="skill-pill"><span>State Management</span></div>
-      <div class="skill-pill"><span>REST API Integration</span></div>
-      <div class="skill-pill"><span>Git & GitHub</span></div>
-      <div class="skill-pill"><span>Data Analysis</span></div>
-      <div class="skill-pill"><span>Machine Learning</span></div>
-    </div>
-  </div>
+
+<div class="reveal">
+
+<div class="tag">
+Skills
+</div>
+
+<h2 class="sec-title">
+What I Know
+</h2>
+
+<div class="skills-wrap">
+
+<div class="skill-pill"><span>Flutter</span></div>
+<div class="skill-pill"><span>Dart</span></div>
+<div class="skill-pill"><span>Firebase</span></div>
+<div class="skill-pill"><span>REST API</span></div>
+<div class="skill-pill"><span>State Management</span></div>
+<div class="skill-pill"><span>Git & GitHub</span></div>
+<div class="skill-pill"><span>UI / UX Design</span></div>
+<div class="skill-pill"><span>Machine Learning</span></div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- EDUCATION -->
+
 <section id="education" class="section-wrap">
-  <div class="reveal">
-    <div class="tag">Education</div>
-    <h2 class="sec-title">Background</h2>
-    <div class="edu-card">
-      <div class="edu-year">2024</div>
-      <div>
-        <div class="edu-degree">B.Sc. in Artificial Intelligence</div>
-        <div class="edu-school">Menoufia National University — Shebin El Kom</div>
-        <div class="edu-desc">Specialized in Internet of Things (IoT) systems, with a focus on embedded systems, sensors, microcontrollers, and hardware–software integration. Built strong foundations in programming, data structures, and analytical thinking.</div>
-      </div>
-    </div>
-  </div>
+
+<div class="reveal">
+
+<div class="tag">
+Education
+</div>
+
+<h2 class="sec-title">
+Background
+</h2>
+
+<div class="edu-card">
+
+<div class="edu-year">
+2024
+</div>
+
+<div>
+
+<div class="edu-degree">
+B.Sc. in Artificial Intelligence
+</div>
+
+<div class="edu-school">
+Menoufia National University — Shebin El Kom
+</div>
+
+<div class="edu-desc">
+
+Specialized in Artificial Intelligence with a strong foundation in software engineering, programming, problem solving, mobile application development, and modern technologies.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- EXPERIENCE -->
+
 <section id="experience" class="section-wrap">
-  <div class="reveal">
-    <div class="tag">Experience</div>
-    <h2 class="sec-title">Where I've Worked</h2>
-    <div class="exp-list">
-      <div class="exp-item">
-        <div>
-          <div class="exp-role">Flutter & Mobile App Development Intern</div>
-          <div class="exp-org">DEPI</div>
-        </div>
-        <div class="exp-arrow">→</div>
-      </div>
-      <div class="exp-item" style="cursor:pointer" onclick="window.open('https://drive.google.com/file/d/1Dzv1Cenii_gVqTldRiSaKUNJcx87sqfN/view?usp=sharing','_blank')">
-        <div>
-          <div class="exp-role">Data Analysis & Machine Learning Intern</div>
-          <div class="exp-org">NTI — View Certificate ↗</div>
-        </div>
-        <div class="exp-arrow">→</div>
-      </div>
-    </div>
-  </div>
-</section>
 
+<div class="reveal">
+
+<div class="tag">
+Experience
+</div>
+
+<h2 class="sec-title">
+Where I've Worked
+</h2>
+
+<div class="exp-list">
+
+<div class="exp-item">
+
+<div>
+
+<div class="exp-role">
+Flutter & Mobile App Development Intern
+</div>
+
+<div class="exp-org">
+DEPI
+</div>
+
+</div>
+
+<div class="exp-arrow">
+→
+</div>
+
+</div>
+
+<div class="exp-item"
+style="cursor:pointer"
+onclick="window.open('https://drive.google.com/file/d/1Dzv1Cenii_gVqTldRiSaKUNJcx87sqfN/view?usp=sharing','_blank')">
+
+<div>
+
+<div class="exp-role">
+Data Analysis & Machine Learning Intern
+</div>
+
+<div class="exp-org">
+NTI — View Certificate ↗
+</div>
+
+</div>
+
+<div class="exp-arrow">
+→
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 <!-- PROJECTS -->
+
 <section id="projects" class="section-wrap">
-  <div class="reveal">
-    <div class="tag">Projects</div>
-    <h2 class="sec-title">Things I Built</h2>
-    <div class="proj-grid">
 
-      <!-- PROJECT 01 — placeholder, 6 images -->
-      <div class="proj-card">
-        <span class="todo-badge">Add content</span>
-        <div class="proj-imgs">
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 1</span></div>
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 2</span></div>
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 3</span></div>
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 4</span></div>
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 5</span></div>
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 6</span></div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-num">01 — FLUTTER</div>
-          <div class="proj-title">Project Title</div>
-          <p class="proj-desc placeholder-text">Write the project description here — what it does, the problem it solves, and the tech stack used.</p>
-        </div>
-      </div>
+<div class="reveal">
 
-      <!-- PROJECT 02 — Notes App -->
-      <div class="proj-card">
-        <div class="proj-imgs">
-          <img src="./images/notes1.jpeg" alt="Notes App Screen 1">
-          <img src="./images/notes2.jpeg" alt="Notes App Screen 2">
-          <img src="./images/notes3.jpeg" alt="Notes App Screen 3">
-          <img src="./images/notes4.jpeg" alt="Notes App Screen 4">
-        </div>
-        <div class="proj-body">
-          <div class="proj-num">02 — FLUTTER</div>
-          <div class="proj-title">Notes App</div>
-          <div class="proj-desc">Full-featured notes app with CRUD operations, local storage, and password protection for secure note management.</div>
-        </div>
-      </div>
+<div class="tag">
+Projects
+</div>
 
-      <!-- PROJECT 03 — BMI Calculator -->
-      <div class="proj-card">
-        <div class="proj-imgs">
-          <img src="./images/bmi1.jpeg" alt="BMI App Screen 1">
-          <img src="./images/bmi2.jpeg" alt="BMI App Screen 2">
-        </div>
-        <div class="proj-body">
-          <div class="proj-num">03 — FLUTTER</div>
-          <div class="proj-title">BMI Calculator App</div>
-          <div class="proj-desc">Flutter BMI calculator featuring a clean, intuitive UI and simple logic. Calculates body mass index with smooth interactions.</div>
-        </div>
-      </div>
+<h2 class="sec-title">
+Things I Built
+</h2>
 
-      <!-- PROJECT 04 — placeholder, 4 images -->
-      <div class="proj-card">
-        <span class="todo-badge">Add content</span>
-        <div class="proj-imgs">
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 1</span></div>
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 2</span></div>
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 3</span></div>
-          <div class="img-placeholder"><span class="plus">+</span><span>Image 4</span></div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-num">04 — FLUTTER</div>
-          <div class="proj-title">Project Title</div>
-          <p class="proj-desc placeholder-text">Write the project description here — what it does, the problem it solves, and the tech stack used.</p>
-        </div>
-      </div>
+<div class="proj-grid">
 
-    </div>
-  </div>
+<!-- PROJECT 01 -->
+
+<div class="proj-card">
+
+<div class="proj-imgs">
+
+<img src="./images/m1.png" alt="Medicine App 1">
+<img src="./images/m2.png" alt="Medicine App 2">
+<img src="./images/m3.png" alt="Medicine App 3">
+<img src="./images/m4.png" alt="Medicine App 4">
+<img src="./images/m5.png" alt="Medicine App 5">
+<img src="./images/m6.png" alt="Medicine App 6">
+<img src="./images/m7.png" alt="Medicine App 7">
+<img src="./images/m8.png" alt="Medicine App 8">
+
+</div>
+
+<div class="proj-body">
+
+<div class="proj-num">
+01 — FLUTTER
+</div>
+
+<div class="proj-title">
+Medicine Reminder App
+</div>
+
+<div class="proj-desc">
+
+A healthcare application developed using Flutter that helps users manage medication schedules, receive reminder notifications, browse medical articles, find doctors, monitor health statistics, and manage their profile through a modern and intuitive interface.
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT 02 -->
+
+<div class="proj-card">
+
+<div class="proj-imgs">
+
+<img src="./images/q1.png" alt="Quiz App 1">
+<img src="./images/q2.png" alt="Quiz App 2">
+<img src="./images/q3.png" alt="Quiz App 3">
+
+</div>
+
+<div class="proj-body">
+
+<div class="proj-num">
+02 — FLUTTER
+</div>
+
+<div class="proj-title">
+Quiz Master App
+</div>
+
+<div class="proj-desc">
+
+An interactive Flutter quiz application with multiple-choice questions, real-time score calculation, progress tracking, and a modern user interface that creates an engaging learning experience.
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT 03 -->
+
+<div class="proj-card">
+
+<div class="proj-imgs">
+
+<img src="./images/notes1.jpeg" alt="Notes 1">
+<img src="./images/notes2.jpeg" alt="Notes 2">
+<img src="./images/notes3.jpeg" alt="Notes 3">
+<img src="./images/notes4.jpeg" alt="Notes 4">
+
+</div>
+
+<div class="proj-body">
+
+<div class="proj-num">
+03 — FLUTTER
+</div>
+
+<div class="proj-title">
+Notes App
+</div>
+
+<div class="proj-desc">
+
+A Flutter notes application with CRUD operations, secure local storage, password protection, and a clean user interface for organizing daily notes efficiently.
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT 04 -->
+
+<div class="proj-card">
+
+<div class="proj-imgs">
+
+<img src="./images/bmi1.jpeg" alt="BMI 1">
+<img src="./images/bmi2.jpeg" alt="BMI 2">
+
+</div>
+
+<div class="proj-body">
+
+<div class="proj-num">
+04 — FLUTTER
+</div>
+
+<div class="proj-title">
+BMI Calculator App
+</div>
+
+<div class="proj-desc">
+
+A clean and responsive Flutter BMI calculator that instantly calculates Body Mass Index and displays health status using a modern user interface.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-
 <!-- CONTACT -->
+
 <section id="contact" class="section-wrap">
-  <div class="reveal">
-    <div class="tag">Contact</div>
-    <div class="contact-grid">
-      <div>
-        <div class="contact-big">Let's<br>Work<br><em>Together.</em></div>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/ahmed-samak1" target="_blank" class="social-btn">LinkedIn</a>
-          <a href="https://github.com/ahmadsamak1" target="_blank" class="social-btn">GitHub</a>
-          <a href="https://drive.google.com/file/d/1AyDa4PcdBFD7iyjfu5fCUZmUNhtLjqJx/view?usp=sharing" target="_blank" class="social-btn">Download CV</a>
-        </div>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:ahmedsmksmk87@gmail.com" class="contact-link">
-          <div class="contact-icon">✉</div>
-          <div class="contact-detail">
-            <span class="c-label">Email</span>
-            <span class="c-val">ahmedsmksmk87@gmail.com</span>
-          </div>
-        </a>
-        <a href="tel:01020504763" class="contact-link">
-          <div class="contact-icon">☏</div>
-          <div class="contact-detail">
-            <span class="c-label">Phone</span>
-            <span class="c-val">01020504763</span>
-          </div>
-        </a>
-        <div class="contact-link" style="cursor:default;">
-          <div class="contact-icon">📍</div>
-          <div class="contact-detail">
-            <span class="c-label">Location</span>
-            <span class="c-val">Menoufia, Shebin El Kom</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+<div class="reveal">
+
+<div class="tag">
+Contact
+</div>
+
+<div class="contact-grid">
+
+<div>
+
+<div class="contact-big">
+Let's<br>
+Work<br>
+<em>Together.</em>
+</div>
+
+<div class="socials">
+
+<a href="https://www.linkedin.com/in/ahmed-samak1"
+target="_blank"
+class="social-btn">
+LinkedIn
+</a>
+
+<a href="https://github.com/ahmadsamak1"
+target="_blank"
+class="social-btn">
+GitHub
+</a>
+
+<a href="https://drive.google.com/file/d/1AyDa4PcdBFD7iyjfu5fCUZmUNhtLjqJx/view?usp=sharing"
+target="_blank"
+class="social-btn">
+Download CV
+</a>
+
+</div>
+
+</div>
+
+<div class="contact-links">
+
+<a href="mailto:ahmedsmksmk87@gmail.com"
+class="contact-link">
+
+<div class="contact-icon">
+✉
+</div>
+
+<div class="contact-detail">
+
+<span class="c-label">
+Email
+</span>
+
+<span class="c-val">
+ahmedsmksmk87@gmail.com
+</span>
+
+</div>
+
+</a>
+
+<a href="tel:01020504763"
+class="contact-link">
+
+<div class="contact-icon">
+☏
+</div>
+
+<div class="contact-detail">
+
+<span class="c-label">
+Phone
+</span>
+
+<span class="c-val">
+01020504763
+</span>
+
+</div>
+
+</a>
+
+<div class="contact-link"
+style="cursor:default;">
+
+<div class="contact-icon">
+📍
+</div>
+
+<div class="contact-detail">
+
+<span class="c-label">
+Location
+</span>
+
+<span class="c-val">
+Menoufia, Shebin El-Kom
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- FOOTER -->
+
 <footer>
-  <span>© 2025 Ahmed Samak. All rights reserved.</span>
-  <span>Built with care <span style="color:var(--accent)">♥</span></span>
+
+<span>
+© 2025 Ahmed Samak. All rights reserved.
+</span>
+
+<span>
+Built with care
+<span style="color:var(--accent)">♥</span>
+</span>
+
 </footer>
 
+<!-- SCRIPTS -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 <script src="./script.js"></script>
+
 </body>
+
 </html>

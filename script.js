@@ -382,4 +382,102 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// ============================================================
+// Project image feed — auto-scrolls sideways in a seamless loop,
+// like a live feed. Pauses on hover so the user can pick an image
+// to click. Skipped for cards that only have placeholder slots.
+// ============================================================
+document.querySelectorAll('.proj-imgs').forEach(container => {
+  const originalImgs = Array.from(container.querySelectorAll('img'));
+  if (originalImgs.length < 2) return; // not enough images to loop meaningfully
 
+  // Wrap the real images in a track div so we can duplicate + translate it
+  const track = document.createElement('div');
+  track.className = 'proj-imgs-track';
+  originalImgs.forEach(img => track.appendChild(img));
+  container.appendChild(track);
+
+  // Duplicate the set once so the loop can reset seamlessly at the halfway point
+  originalImgs.forEach(img => {
+    const clone = img.cloneNode(true);
+    clone.setAttribute('data-clone', 'true');
+    track.appendChild(clone);
+  });
+
+  let paused = false;
+  const speed = 0.5; // pixels per animation frame
+
+  container.addEventListener('mouseenter', () => { paused = true; });
+  container.addEventListener('mouseleave', () => { paused = false; });
+  // also pause on touch, so mobile users can tap an image without it sliding away
+  container.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+
+  function tick() {
+    if (!paused) {
+      container.scrollLeft += speed;
+      const half = track.scrollWidth / 2;
+      if (container.scrollLeft >= half) {
+        container.scrollLeft -= half;
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+});
+
+// ============================================================
+// Lightbox — click any project image to view it full-size,
+// with prev/next navigation through that project's own gallery.
+// ============================================================
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('.lightbox-img');
+const lightboxCounter = lightbox.querySelector('.lightbox-counter');
+let galleryImages = [];
+let galleryIndex = 0;
+
+function showGalleryImage() {
+  lightboxImg.src = galleryImages[galleryIndex];
+  lightboxCounter.textContent = `${galleryIndex + 1} / ${galleryImages.length}`;
+}
+
+function openLightbox(container, clickedSrc) {
+  // Build the gallery from the original (non-cloned) images only, so
+  // prev/next cycles through each screenshot exactly once.
+  galleryImages = Array.from(container.querySelectorAll('img:not([data-clone])')).map(img => img.src);
+  const foundIndex = galleryImages.indexOf(clickedSrc);
+  galleryIndex = foundIndex === -1 ? 0 : foundIndex;
+  showGalleryImage();
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('click', (e) => {
+  const img = e.target.closest('.proj-imgs img');
+  if (!img) return;
+  const container = img.closest('.proj-imgs');
+  openLightbox(container, img.src);
+});
+
+lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+lightbox.querySelector('.lightbox-prev').addEventListener('click', () => {
+  galleryIndex = (galleryIndex - 1 + galleryImages.length) % galleryImages.length;
+  showGalleryImage();
+});
+lightbox.querySelector('.lightbox-next').addEventListener('click', () => {
+  galleryIndex = (galleryIndex + 1) % galleryImages.length;
+  showGalleryImage();
+});
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') lightbox.querySelector('.lightbox-prev').click();
+  if (e.key === 'ArrowRight') lightbox.querySelector('.lightbox-next').click();
+});

@@ -771,19 +771,50 @@
     box-shadow: 0 40px 80px rgba(0,0,0,.4);
   }
 
+  /* Image feed strip — auto-scrolls sideways in a seamless loop (JS duplicates
+     the images into a .proj-imgs-track and animates scrollLeft). Overflow is
+     hidden because scrolling is automatic, not user-dragged. */
   .proj-imgs {
-    display:flex; gap:10px; padding:20px; overflow-x:auto;
-    scrollbar-width:none;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
   }
-  .proj-imgs::-webkit-scrollbar { display:none; }
+  .proj-imgs-track {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+  }
   .proj-imgs img {
-    height:140px; width:auto;
-    border-radius:12px;
-    object-fit:cover;
-    flex-shrink:0;
-    transition:transform .3s;
+    height: 140px;
+    width: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform .3s;
   }
-  .proj-imgs img:hover { transform:scale(1.06); }
+  .proj-imgs img:hover { transform: scale(1.06); }
+
+  /* soft edge fade so the looping feed doesn't have a hard cut visually */
+  .proj-imgs::before,
+  .proj-imgs::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 36px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .proj-imgs::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(17,17,24,.9), transparent);
+  }
+  .proj-imgs::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(17,17,24,.9), transparent);
+  }
 
   /* placeholder slots for images not added yet */
   .img-placeholder {
@@ -843,6 +874,91 @@
     margin-bottom:10px;
   }
   .proj-desc { font-size:14px; color:var(--muted); line-height:1.7; flex:1; }
+
+  /* ── LIGHTBOX (fullscreen image viewer) ── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    background: rgba(6,6,10,.94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+  }
+  .lightbox.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .lightbox-img {
+    max-width: 88vw;
+    max-height: 86vh;
+    border-radius: 16px;
+    box-shadow: 0 30px 90px rgba(0,0,0,.6);
+    transform: scale(.96);
+    transition: transform .3s ease;
+  }
+  .lightbox.active .lightbox-img { transform: scale(1); }
+
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    background: var(--card-bg-glass);
+    border: 1px solid var(--border);
+    color: var(--cream);
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all .25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .lightbox-close {
+    top: 28px;
+    right: 28px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .lightbox-prev,
+  .lightbox-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  .lightbox-prev { left: 28px; }
+  .lightbox-next { right: 28px; }
+
+  .lightbox-counter {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    background: var(--card-bg-glass);
+    border: 1px solid var(--border);
+    padding: 8px 18px;
+    border-radius: 100px;
+    backdrop-filter: blur(12px);
+  }
 
   /* ── CONTACT ── */
   .contact-grid {
@@ -965,4 +1081,8 @@
     .edu-card { grid-template-columns:1fr; gap:20px; padding:32px 24px; }
     .edu-year { writing-mode:horizontal-tb; }
     footer { flex-direction:column; gap:12px; text-align:center; }
+    .lightbox-prev, .lightbox-next { width:42px; height:42px; font-size:15px; }
+    .lightbox-prev { left:10px; }
+    .lightbox-next { right:10px; }
+    .lightbox-close { top:16px; right:16px; width:40px; height:40px; }
   }
